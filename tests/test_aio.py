@@ -2,6 +2,7 @@ import pytest
 
 from ratelimiter import RateLimiter
 
+
 @pytest.mark.asyncio
 async def test_alock(event_loop):
     rl = RateLimiter(max_calls=10, period=0.01)

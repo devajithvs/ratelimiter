@@ -16,10 +16,10 @@
 
 import sys
 
-__author__ = 'Frazer McLean <frazer@frazermclean.co.uk>'
-__version__ = '1.2.0.post0'
-__license__ = 'Apache'
-__description__ = 'Simple python rate limiting object'
+__author__ = "Frazer McLean <frazer@frazermclean.co.uk>"
+__version__ = "1.2.0.post0"
+__license__ = "Apache"
+__description__ = "Simple python rate limiting object"
 
 # Async support is provided only on Python 3.5+
 if sys.version_info >= (3, 5):
@@ -27,6 +27,4 @@ if sys.version_info >= (3, 5):
 else:
     from ._sync import RateLimiter
 
-__all__ = [
-    "RateLimiter",
-]
+__all__ = ["RateLimiter"]

@@ -9,7 +9,6 @@ from ._sync import RateLimiter
 
 
 class AsyncRateLimiter(RateLimiter):
-
     def _init_async_lock(self):
         with self._init_lock:
             if self._alock is None:

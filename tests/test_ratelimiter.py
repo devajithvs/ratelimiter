@@ -22,7 +22,6 @@ from ratelimiter import RateLimiter
 
 
 class Timer(object):
-
     def __enter__(self):
         self.start = time.time()
         return self
@@ -100,6 +99,7 @@ class TestBasic(unittest.TestCase):
         @RateLimiter(self.max_calls, self.period)
         def f():
             f.calls.append(time.time())
+
         f.calls = []
 
         [f() for i in range(3 * self.max_calls)]
